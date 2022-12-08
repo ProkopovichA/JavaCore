@@ -1,9 +1,20 @@
-package home_work_12;
+package home_work_12_stream_api;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
 
 public class Main {
+    public static int sumOfNumber(int number) {
+        int result = 0;
+        while (number != 0) {
+            result = result + (number % 10);
+            number = number / 10;
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
         List<Integer> arrInteger = new ArrayList<>();
         Random random = new Random();
@@ -14,14 +25,15 @@ public class Main {
 
         System.out.println("Начальный массив: ");
         System.out.println(arrInteger.toString());
-        //arrInteger.stream().mapToInt(i -> i).toArray()
 
         System.out.println("Минимальное число: " + arrInteger.stream().min(Integer::compare).get());
         System.out.println("Максимально число: " + arrInteger.stream().max(Integer::compare).get());
         System.out.println("Среднее арифметическое: " + arrInteger.stream().mapToInt(i -> i).average());
         System.out.println("Произведение всех чисел: " + arrInteger.stream().reduce((x, y) -> x * y));
         System.out.println("Сумма всех чисел: " + arrInteger.stream().mapToInt(i -> i).sum());
-        // System.out.println("Сумма всех цифр: " + arrInteger.toString().toCharArray());
+        System.out.println("Сумма всех цифр: " + arrInteger.stream().mapToInt(i -> i).map(i -> sumOfNumber(i)).sum());
+
+
 
         List<String> myList = Arrays.asList("a1", "a2", "a3", "b1", "b3", "c2", "c1", "c5");
         List<String> stringsWithLoginWord = myList.stream().filter(s -> !(s.contains("3"))).collect(Collectors.toList());

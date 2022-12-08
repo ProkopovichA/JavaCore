@@ -1,4 +1,4 @@
-package lesson_14;
+package lesson_14_stream_api;
 
 import java.util.*;
 import java.util.stream.Collectors;
