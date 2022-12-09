@@ -1,4 +1,4 @@
-package lesson_16.workers;
+package lesson_16_inheritance_repeat.workers;
 
 public class Manager extends Worker {
     public void checkWorkerWork(String workerName) {

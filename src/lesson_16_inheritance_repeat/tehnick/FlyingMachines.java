@@ -1,9 +1,7 @@
-package lesson_16.tehnick;
+package lesson_16_inheritance_repeat.tehnick;
 
-import lesson_16.Printable;
-import lesson_16.Reportable;
-
-import javax.lang.model.element.Name;
+import lesson_16_inheritance_repeat.Printable;
+import lesson_16_inheritance_repeat.Reportable;
 
 public abstract class FlyingMachines  implements Reportable, Printable {
     public String name;

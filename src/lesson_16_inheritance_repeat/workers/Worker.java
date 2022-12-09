@@ -1,7 +1,7 @@
-package lesson_16.workers;
+package lesson_16_inheritance_repeat.workers;
 
-import lesson_16.Printable;
-import lesson_16.Reportable;
+import lesson_16_inheritance_repeat.Printable;
+import lesson_16_inheritance_repeat.Reportable;
 
 public abstract class Worker implements Reportable, Printable {
     private String name;

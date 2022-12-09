@@ -1,4 +1,4 @@
-package lesson_16;
+package lesson_16_inheritance_repeat;
 
 public class Printer {
     public static void print(Printable p) {

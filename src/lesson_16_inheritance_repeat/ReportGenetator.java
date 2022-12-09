@@ -1,7 +1,4 @@
-package lesson_16;
-
-import lesson_16.tehnick.FlyingMachines;
-import lesson_16.workers.Worker;
+package lesson_16_inheritance_repeat;
 
 public class ReportGenetator {
 

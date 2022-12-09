@@ -1,4 +1,4 @@
-package lesson_16;
+package lesson_16_inheritance_repeat;
 
 public class NamePrinter<T> {
     private T sameObject;

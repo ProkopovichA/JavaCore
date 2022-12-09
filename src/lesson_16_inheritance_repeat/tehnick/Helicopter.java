@@ -1,6 +1,6 @@
-package lesson_16.tehnick;
+package lesson_16_inheritance_repeat.tehnick;
 
-import lesson_16.Printable;
+import lesson_16_inheritance_repeat.Printable;
 
 public class Helicopter extends FlyingMachines implements Printable {
 

@@ -1,4 +1,4 @@
-package lesson_16;
+package lesson_16_inheritance_repeat;
 
 public class Main {
     public static void main(String[] args) {

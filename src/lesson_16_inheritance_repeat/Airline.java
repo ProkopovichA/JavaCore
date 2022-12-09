@@ -1,12 +1,12 @@
-package lesson_16;
+package lesson_16_inheritance_repeat;
 
-import lesson_16.tehnick.Airplane;
-import lesson_16.tehnick.FlyingMachines;
-import lesson_16.tehnick.Helicopter;
-import lesson_16.tehnick.Quadcopter;
-import lesson_16.workers.Manager;
-import lesson_16.workers.OfficeWorker;
-import lesson_16.workers.Worker;
+import lesson_16_inheritance_repeat.tehnick.Airplane;
+import lesson_16_inheritance_repeat.tehnick.FlyingMachines;
+import lesson_16_inheritance_repeat.tehnick.Helicopter;
+import lesson_16_inheritance_repeat.tehnick.Quadcopter;
+import lesson_16_inheritance_repeat.workers.Manager;
+import lesson_16_inheritance_repeat.workers.OfficeWorker;
+import lesson_16_inheritance_repeat.workers.Worker;
 
 import java.util.ArrayList;
 import java.util.List;
