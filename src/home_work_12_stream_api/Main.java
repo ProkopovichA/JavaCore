@@ -1,8 +1,10 @@
 package home_work_12_stream_api;
 
+import com.sun.tools.javac.util.StringUtils;
+
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
+
 
 
 public class Main {
@@ -32,18 +34,19 @@ public class Main {
         System.out.println("Произведение всех чисел: " + arrInteger.stream().reduce((x, y) -> x * y));
         System.out.println("Сумма всех чисел: " + arrInteger.stream().mapToInt(i -> i).sum());
         System.out.println("Сумма всех цифр: " + arrInteger.stream().mapToInt(i -> i).map(i -> sumOfNumber(i)).sum());
+        System.out.println();
 
-        System.out.println("Выведем начальный массив");
+        System.out.println("3.0 Выведем начальный массив");
         List<String> myList = Arrays.asList("a1", "a2", "a3", "b1", "b3", "c2", "c1", "c5");
         System.out.println(myList);
         System.out.println();
 
-//        System.out.println("Выводим без элементов которые не содержат 3: ");
-//        List<String> stringsWithLoginWord = myList.stream().filter(s -> !(s.contains("3"))).collect(Collectors.toList());
-//        System.out.println(stringsWithLoginWord);
-//        System.out.println();
+        System.out.println("3.1 Выводим без элементов которые не содержат 3: ");
+        List<String> resultArray = myList.stream().filter(s -> !(s.contains("3"))).collect(Collectors.toList());
+        System.out.println(resultArray);
+        System.out.println();
 
-        System.out.println("Выводим сортированный массив: ");
+        System.out.println("3.2 Выводим сортированный массив: ");
         Comparator<String> myStringComparator = (s1, s2) -> {
             int num1 = Integer.parseInt(s1.replaceAll("\\D", ""));
             int num2 = Integer.parseInt(s2.replaceAll("\\D", ""));
@@ -64,10 +67,34 @@ public class Main {
                 }
             }
         };
-
-        myList = myList.stream().sorted(myStringComparator).collect(Collectors.toList());
-        System.out.println(myList);
+        //Использовал исходный массив что бы максимально полно проверить компоратор
+        System.out.println(myList.stream().sorted(myStringComparator).collect(Collectors.toList()));
         System.out.println();
+
+        System.out.println("3.3 Отбрасываем первый и последний элемент: ");
+        resultArray = resultArray.stream().skip(1).collect(Collectors.toList());
+        resultArray = resultArray.stream().limit(resultArray.size()-1).collect(Collectors.toList());
+        System.out.println(resultArray);
+        System.out.println();
+
+        System.out.println("3.4 Привести в uppercase: ");
+        resultArray = resultArray.stream().map(String::toUpperCase).collect(Collectors.toList());
+        System.out.println(resultArray);
+        System.out.println();
+
+        System.out.println("3.5 выдать на печать результат: ");
+        resultArray.stream().forEach(System.out::println);
+        System.out.println();
+
+        System.out.println("3.6 Напечатать количество оставшихся элементов: ");
+        System.out.println(resultArray.stream().count());
+
+
+
+
+
+
+
 
 
     }
