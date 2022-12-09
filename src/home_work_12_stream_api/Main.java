@@ -6,7 +6,6 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 
-
 public class Main {
     public static int sumOfNumber(int number) {
         int result = 0;
@@ -73,7 +72,7 @@ public class Main {
 
         System.out.println("3.3 Отбрасываем первый и последний элемент: ");
         resultArray = resultArray.stream().skip(1).collect(Collectors.toList());
-        resultArray = resultArray.stream().limit(resultArray.size()-1).collect(Collectors.toList());
+        resultArray = resultArray.stream().limit(resultArray.size() - 1).collect(Collectors.toList());
         System.out.println(resultArray);
         System.out.println();
 
@@ -88,13 +87,6 @@ public class Main {
 
         System.out.println("3.6 Напечатать количество оставшихся элементов: ");
         System.out.println(resultArray.stream().count());
-
-
-
-
-
-
-
 
 
     }
