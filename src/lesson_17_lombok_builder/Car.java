@@ -1,4 +1,4 @@
-package lesson_17_lombok_builred;
+package lesson_17_lombok_builder;
 
 
 import lombok.Data;
