@@ -1,6 +1,5 @@
 package home_work_12_stream_api;
 
-import com.sun.tools.javac.util.StringUtils;
 
 import java.util.*;
 import java.util.stream.Collectors;
